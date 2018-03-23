@@ -13,11 +13,12 @@ end
 
 
 def start
-  #hand = {1=>"ぐー",2=>"パー",3=>"チョキ"}
+  hand = {1=>"グー", 2=>"パー", 3=>"チョキ"}
   puts '数字を入力してください。'
-  puts '1: グー'
-  puts '2: パー'
-  puts '3: チョキ'
+  hand.each do |key, value|
+    puts "#{key}: #{value}"
+  end
+
   pc = rand(1..3)
   user = gets.to_i
   #puts "pc#{hand[pc]} user#{hand[user]}"
