@@ -21,8 +21,16 @@ def start
 
   pc = rand(1..3)
   user = gets.to_i
+  if 0 < user && user <= 3
+    judge(pc, user)
+  else
+    puts "１〜３を入力してください"
+    puts
+    puts "------------------------"
+    start
+  end
   #puts "pc#{hand[pc]} user#{hand[user]}"
-  judge(pc, user)
+
 end
 
 
