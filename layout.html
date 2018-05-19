@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <header></header>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <div class="row">
+          <div class="col-6"></div>
+          <div class="col-6"></div>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <footer></footer>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+  let getSiblings = function (elem) {
+  let siblings = [];
+  let sibling = elem.parentNode.firstChild
+
+  while(sibling){
+      console.log(sibling.nodeType);
+      if (sibling.nodeType == 1){
+        siblings.push(sibling);
+      }
+      sibling = sibling.nextSibling;
+  }
+  return siblings;
+}
+
+let elem = document.querySelector('.container').children[1].childNodes[1];
+let siblings = getSiblings(elem);
+
+console.log(siblings)
+</script>
+
+</body>
+
+</html>
